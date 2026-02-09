@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,8 @@ Route::middleware(['auth', 'role:ADMIN'])->get('/solo-admin', function () {
 Route::middleware(['auth', 'role:ADMIN,EMPLEADO'])->get('/inventario-demo', function () {
     return "✅ Acceso OK: ADMIN o EMPLEADO";
 });
+
+Route::middleware(['auth', 'role:ADMIN'])->group(function () {
+    Route::resource('productos', ProductController::class);
+});
+
