@@ -15,4 +15,10 @@ class Product extends Model
     'active',
 ];
 
+public function movements()
+{
+    return $this->hasMany(\App\Models\InventoryMovement::class);
+}
+
+
 }

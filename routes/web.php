@@ -3,6 +3,15 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InventoryMovementController;
+
+Route::middleware(['auth', 'role:ADMIN,EMPLEADO'])->group(function () {
+    Route::get('/inventario', [InventoryMovementController::class, 'index'])->name('inventario.index');
+    Route::get('/inventario/crear', [InventoryMovementController::class, 'create'])->name('inventario.create');
+    Route::post('/inventario', [InventoryMovementController::class, 'store'])->name('inventario.store');
+});
+
+
 
 Route::get('/', function () {
     return view('welcome');
