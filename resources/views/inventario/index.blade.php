@@ -10,7 +10,7 @@
                 <div class="p-3 bg-green-100 rounded">{{ session('status') }}</div>
             @endif
 
-            <div class="bg-white p-4 rounded shadow">
+            <div class="bg-jig-card p-4 rounded shadow">
                 <form class="flex flex-col sm:flex-row gap-3 items-end" method="GET">
                     <div class="w-full sm:w-80">
                         <label class="block text-sm mb-1">Filtrar por producto</label>
@@ -21,7 +21,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <button class="px-4 py-2 bg-gray-800 text-white rounded">Filtrar</button>
+                    <button class="px-4 py-2 bg-jig-accent text-white rounded">Filtrar</button>
 <a href="{{ route('inventario.create') }}"
    class="px-4 py-2 bg-blue-600 rounded"
    style="color:#ffffff; font-weight:700;">
@@ -30,7 +30,7 @@
                 </form>
             </div>
 
-            <div class="bg-white p-4 rounded shadow overflow-x-auto">
+            <div class="bg-jig-card p-4 rounded shadow overflow-x-auto">
                 <table class="min-w-full text-sm">
                     <thead>
                         <tr class="text-left border-b">

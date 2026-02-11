@@ -5,7 +5,7 @@
 
     <div class="py-6">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white p-6 rounded shadow space-y-4">
+            <div class="bg-jig-card p-6 rounded shadow space-y-4">
 
                 @if (session('status'))
                     <div class="p-3 bg-green-100 rounded">{{ session('status') }}</div>
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="flex gap-2">
-                        <button class="px-4 py-2 bg-gray-800 text-white rounded">Guardar</button>
+                        <button class="px-4 py-2 bg-jig-accent text-white rounded">Guardar</button>
                         <a href="{{ route('inventario.index') }}" class="px-4 py-2 border rounded">Volver</a>
                     </div>
                 </form>
